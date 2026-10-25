@@ -1,0 +1,19 @@
+# Local runtime artifacts created by the launcher scripts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+
+# Frontend build inputs (dist/ IS shipped, node_modules is not)
+node_modules/
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

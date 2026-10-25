@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        color-scheme: dark;
+    }
+
+    html {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        @apply bg-canvas text-ink font-sans antialiased;
+        background-image:
+            radial-gradient(60rem 30rem at 50% -10%, rgba(79, 140, 255, 0.12), transparent 70%),
+            radial-gradient(40rem 24rem at 100% 0%, rgba(79, 140, 255, 0.06), transparent 70%);
+        background-repeat: no-repeat;
+    }
+
+    ::selection {
+        @apply bg-accent/30 text-ink;
+    }
+
+    :focus-visible {
+        @apply outline-none ring-2 ring-accent/70 ring-offset-2 ring-offset-canvas;
+    }
+
+    summary::-webkit-details-marker {
+        display: none;
+    }
+}
+
+@layer components {
+    .panel {
+        @apply rounded-2xl border border-line bg-surface/80 shadow-panel backdrop-blur;
+    }
+
+    .pill {
+        @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium;
+    }
+}
